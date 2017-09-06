@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-mongo-rest-ut-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*.test.js",
+     "test-watch": "nodemon --exec 'npm test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminhuanghuang/nodejs-mongo-rest-ut-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminhuanghuang/nodejs-mongo-rest-ut-boilerplate/issues"
+  },
+  "homepage": "https://github.com/benjaminhuanghuang/nodejs-mongo-rest-ut-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "body-parser": "^1.17.2",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.0",
+    "expect": "^21.0.0",
+    "nodemon": "^1.12.0"
+  }
+}

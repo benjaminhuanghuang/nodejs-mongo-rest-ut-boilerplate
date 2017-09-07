@@ -8,6 +8,8 @@
   "test-watch": "nodemon --exec 'npm test'"
   ```
 ## Assertion
+  const expect = require("chai").expect;
+  or
   const assert = require("assert");
   
 ## Async test

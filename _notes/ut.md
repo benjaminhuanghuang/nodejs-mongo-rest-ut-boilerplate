@@ -8,10 +8,14 @@
   "test-watch": "nodemon --exec 'npm test'"
   ```
 ## Assertion
-  const expect = require("chai").expect;
+  ```
+  const { expect, assert} = require("chai");
+  ```
   or
+  ```
   const assert = require("assert");
-  
+  ```
+
 ## Async test
   For the async function testing, the test case will return before the callback was fired. 
   Mocha provide callback function done() to determine the async testing. 

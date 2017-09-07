@@ -1,6 +1,6 @@
 const request = require('supertest');
 //
-var app = require('../server');
+var app = require('../app');
 
 describe('app testing : ', () => {
   it('should return "Hello world"', (done) => {

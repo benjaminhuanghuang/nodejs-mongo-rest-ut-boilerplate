@@ -1,12 +1,10 @@
-const express = require('express');
+const app = require("./app");
 
-var app = express();
+if (process.env.NODE_ENV === "production") {
 
-app.get("/", (req, res)=>{
-  res.send('Hello world');
+}
+
+const PORT = process.env.PORT || 8010; // for prod deployment
+app.listen(PORT, () => {
+  console.log(`Running on port ${PORT}`);
 });
-
-app.listen(3000);
-
-
-module.exports = app;

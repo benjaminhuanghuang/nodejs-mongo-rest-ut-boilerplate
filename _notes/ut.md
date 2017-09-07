@@ -8,9 +8,8 @@
   "test-watch": "nodemon --exec 'npm test'"
   ```
 ## Assertion
-  expect 1.x was donated to Jest
-  - https://github.com/mjackson/expect#spyon
-
+  const assert = require("assert");
+  
 ## Async test
   For the async function testing, the test case will return before the callback was fired. 
   Mocha provide callback function done() to determine the async testing. 

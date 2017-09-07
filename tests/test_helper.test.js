@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const { mongoose } = require("../db/mongoose");
 
 before(done => {
   mongoose.connect("mongodb://localhost/test-temp", {

@@ -1,5 +1,5 @@
 const request = require("supertest");
-const expect = require("chai").expect;
+const { expect, assert} = require("chai");
 const should = require('chai').should(); 
 const { ObjectID } = require("mongodb");
 
@@ -162,11 +162,11 @@ describe('DELETE /todos/:id', () => {
   });
 });
 
-xdescribe('PATCH /todos/:id', () => {
+describe('PATCH /todos/:id', () => {
   it('should update the todo', (done) => {
     var hexId = todos[0]._id.toHexString();
     var text = 'This should be the new text';
-
+    
     request(app)
       .patch(`/todos/${hexId}`)
       .send({
@@ -176,8 +176,8 @@ xdescribe('PATCH /todos/:id', () => {
       .expect(200)
       .expect((res) => {
         expect(res.body.todo.text).to.equal(text);
-        expect(res.body.todo.completed).to.equal(true);
-        expect(res.body.todo.completedAt).to.equal('number');
+        expect(res.body.todo.completed).to.be.true;
+        assert.isNumber(res.body.todo.completedAt);
       })
       .end(done);
   });
@@ -195,7 +195,7 @@ xdescribe('PATCH /todos/:id', () => {
       .expect(200)
       .expect((res) => {
         expect(res.body.todo.text).to.equal(text);
-        expect(res.body.todo.completed).to.equal(false);
+        expect(res.body.todo.completed).to.be.false;
         expect(res.body.todo.completedAt).to.not.exist;
       })
       .end(done);

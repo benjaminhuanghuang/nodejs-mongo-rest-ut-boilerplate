@@ -8,11 +8,11 @@ const TodoSchema = new Schema({
     minlength: 2,
     trim: true
   },
-  complete: {
+  completed: {
     type: Boolean,
     default: false
   },
-  completeAt: {
+  completedAt: {
     type: Number,
     default: null
   }

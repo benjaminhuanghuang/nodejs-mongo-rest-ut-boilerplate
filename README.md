@@ -15,5 +15,7 @@
   
   - Use mocha, chai , supertest for unit test
     - http://ricostacruz.com/cheatsheets/chai
-    
+    ```
+    const { expect, assert} = require("chai");
+    ```
   
